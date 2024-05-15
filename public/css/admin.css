@@ -1,0 +1,22 @@
+@import '~toastr/build/toastr.css';
+
+/* css Error Message */
+.alert_error_message {
+    color: red;
+    font-size: 13px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    /* background-color: #ffffff; */
+    border: 1px solid #117c7c85;
+    border-radius: 10px;
+    height: 20px;
+    box-shadow: 1px 1px 5px #9ef4f4 inset;
+  }
+/* Change scrollbar thumb color to red */
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to right, #FFE53B, #02d2d2  );
+    border-radius: 10px;
+  }
+
