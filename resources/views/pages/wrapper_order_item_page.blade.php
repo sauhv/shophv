@@ -1,4 +1,5 @@
 @extends('layout')
+@section('titlePage', 'Chi tiết đơn hàng')
 @section('content')
 <div class="wrapper_order_page container py-5">
     <div class="card mb-3">

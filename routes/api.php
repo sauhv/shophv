@@ -25,3 +25,5 @@ Route::resource('home', APIproductController::class);
 Route::get('/getCategory', function () {
     return categories::getCategory();
 });
+Route::get('test', [APIproductController::class , 'testOrder']);
+Route::get('testxt', [APIproductController::class , 'testxt']);

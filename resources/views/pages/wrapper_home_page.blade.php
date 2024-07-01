@@ -1,4 +1,5 @@
 @extends('layout')
+@section('titlePage', 'Shophv.com')
 @section('content')
 <div class="wrapper-home-page">
 

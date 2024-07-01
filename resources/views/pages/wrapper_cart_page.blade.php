@@ -1,4 +1,5 @@
 @extends('layout')
+@section('titlePage', 'Giỏ hàng')
 @section('content')
 <div class="wrapper-cart-page">
     <div style="background: #fff;" class="cart-header">
@@ -125,16 +126,19 @@
                                         <div class="row">
                                             <div class="form-floating mb-3">
                                                 <select class="form-select" id="provinces" name="provinces">
+                                                    <option value="" selected>Chọn tỉnh thành</option>
                                                 </select>
                                                 <label class="ms-2" for="floatingInput">Tỉnh thành phố</label>
                                             </div>
                                             <div class="form-floating mb-3 col-6">
                                                 <select class="form-select" id="districts" name="districts">
+                                                    <option value="" selected>Chọn quận huyện</option>
                                                 </select>
                                                 <label class="ms-2" for="floatingInput">Quận Huyện</label>
                                             </div>
                                             <div class="form-floating mb-3 col-6">
                                                 <select class="form-select" id="wards" name="wards">
+                                                    <option value="" selected>Chọn phường xã</option>
                                                 </select>
                                                 <label class="ms-2" for="floatingInput">Phường xã</label>
                                             </div>
@@ -198,8 +202,6 @@
                 },
                 dataType: "json",
                 success: function(data) {
-                    console.log(data);
-
                     if (data.status == true) {
                         $('#getCouponAmount').html(data.coupon_amount)
                         $('#getPayableTotal').html(data.payable_total)
