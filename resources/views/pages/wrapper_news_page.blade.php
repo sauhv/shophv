@@ -1,4 +1,5 @@
 @extends('layout')
+@section('titlePage', 'Tin tức')
 @section('content')
 <div class="container">
     <div class="group_news">

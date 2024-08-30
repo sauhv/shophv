@@ -39,9 +39,6 @@
         <div class="container-fluid">
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <!-- <li class="nav-item me-4">
-                <a href="{{ url('product-series/')}}" class="nav-link fw-medium text-nowrap active text-primary text-decoration-underline">Tất cả</a>
-              </li> -->
               @foreach($models as $model)
               <li class="nav-item me-4" style="cursor: pointer;">
                 <a href="{{ url('product-series/'.$model->id) }}" class="nav-link fw-medium text-nowrap">{{ $model->model_name }}</a>

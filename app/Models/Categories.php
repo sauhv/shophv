@@ -12,8 +12,11 @@ class Categories extends Model
     protected $fillable = ['id', 'category_name', 'rank', 'hidden', 'created_at', 'updated_at'];
     public $timestamps = false;
 
+    static public function getCategoryMenu() {
+        return self::where('hidden', 1)->orderBy('created_at', 'desc')->limit(6)->get();
+    }
     static public function getCategory() {
-        return Categories::where('hidden', 1)->orderBy('created_at', 'desc')->limit(6)->get();
+        return self::where('hidden', 1)->orderBy('created_at', 'desc')->get();
     }
 
 }

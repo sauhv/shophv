@@ -1,4 +1,5 @@
 @extends('pages.wrapper_productList_page')
+@section('titlePage', 'Sản phẩm theo loại')
 @section('product')
 <div class="product-list-category">
     <div class="list-item row">

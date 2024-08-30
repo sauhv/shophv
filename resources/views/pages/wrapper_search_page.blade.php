@@ -1,4 +1,5 @@
 @extends('layout')
+@section('titlePage', 'Tìm kiếm')
 @section('content')
 <div class="wrapper-category-page container">
     <div class="all_content-category py-4">

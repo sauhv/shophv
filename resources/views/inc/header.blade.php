@@ -15,7 +15,7 @@
                     <ul class="navbar-nav">
                         <!-- <ul class="navbar-nav" id="categoryList">
                         </ul> -->
-                        @foreach ($categoryList as $cate )
+                        @foreach ($categories as $cate )
                             <li class="nav-item">
                                 <a class="nav-link px-3 py-4 text-light" href="{{ url('product/'.$cate->id) }}">{{$cate->category_name}}</a>
                             </li>

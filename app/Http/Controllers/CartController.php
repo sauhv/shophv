@@ -12,23 +12,16 @@ use App\Models\CouponCodes;
 
 class CartController extends Controller
 {
-    public function __construct()
-    {
-        $categoryList = Categories::where('hidden',1)->orderBy('rank', 'asc')->limit(6)->get();
-        View()->share('categoryList', $categoryList);
-    }
 
     public function index()
     {
-        $titlePage = "Cart";
         $total_quantity = \Cart::getTotalQuantity();
         $cart_empty = \Cart::isEmpty();
         $cart_item = \Cart::getContent();
         return view('pages.wrapper_cart_page', [
             'cart_item' =>$cart_item, 
             'cart_empty' => $cart_empty, 
-            'total_quantity' =>$total_quantity,
-            'titlePage' => $titlePage,
+            'total_quantity' =>$total_quantity
         ]);
     }
 
@@ -56,7 +49,8 @@ class CartController extends Controller
     public function destroy(string $id)
     {
         \Cart::remove($id);
-        return response(['status' => 'success', 'message' => 'Đã xóa sản phẩm ID ' .$id. ' ra khỏi cart']);
+        $qtyCart = \Cart::getTotalQuantity();
+        return response(['status' => 'success', 'message' => 'Đã xóa sản phẩm ID ' .$id. ' ra khỏi cart', 'qty' => $qtyCart]);
     }
 
 }

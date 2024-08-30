@@ -14,11 +14,6 @@ use Illuminate\Support\Str;
 
 class PayMentController extends Controller
 {
-    public function __construct()
-    {
-        $categoryList = Categories::getCategory();
-        View()->share('categoryList', $categoryList);
-    }
     public function checkout(checkoutValidate $request)
     {
         if (\Cart::isEmpty() == false) {

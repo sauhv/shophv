@@ -44,8 +44,7 @@ class AuthController extends Controller
 
     public function register()
     {
-        $categoryList = Categories::where('hidden', 1)->orderBy('rank', 'asc')->limit(6)->get();
-        return view('pages.authentic.wrapper_regsiter_page', ['categoryList' => $categoryList]);
+        return view('pages.authentic.wrapper_regsiter_page');
     }
 
     public function auth_register(RuleRegisterForm $request)
@@ -69,8 +68,7 @@ class AuthController extends Controller
 
     public function login_user()
     {
-        $categoryList = Categories::where('hidden', 1)->orderBy('rank', 'asc')->limit(6)->get();
-        return view('pages.authentic.wrapper_login_page', ['categoryList' => $categoryList]);
+        return view('pages.authentic.wrapper_login_page');
     }
 
     public function auth_login_user(Request $request)
@@ -96,8 +94,7 @@ class AuthController extends Controller
 
     public function change_password() 
     {
-        $categoryList = Categories::where('hidden', 1)->orderBy('rank', 'asc')->limit(6)->get();
-        return view('pages.authentic.wrapper_changePass', compact('categoryList'));
+        return view('pages.authentic.wrapper_changePass');
     }
 
     public function update_password(Request $request) 
